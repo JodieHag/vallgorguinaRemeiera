@@ -1,0 +1,33 @@
+header
+  nav#nav
+    ul#main-menu
+      li
+        a(href="")
+          i.fa.fa-globe
+          span
+            |  Idioma
+        ul.submenu
+          li
+            a(href="/es/index.html")
+              span
+                |	#{i18n.general.es}
+          li
+            a(href="/ca/index.html")
+              span
+                |	#{i18n.general.ca}
+          li
+            a(href="/en/index.html")
+              span
+                |	#{i18n.general.en}
+      li
+        a(href=`/${lang}/index.html`)
+          span
+            | #{i18n.general.home}
+      li
+        a(href=`/${lang}/form.html`)
+          span
+            | #{i18n.general.confirmacion}
+      li
+        a(href=`/${lang}/gracias.html`)
+          span
+            | #{i18n.general.gracias}
