@@ -1,11 +1,14 @@
 doctype html
-html
+html(lang!=lang, page!=page)
   head
     block title
     include ./includers/head
+    link(rel="stylesheet" href=`/css/${page}.min.css`)
     block scripts-head
-  body(data-language!=lang)
+  body(data-language!=lang).mm-background-brand
+    include sections/header
     main
       block content
-    include components/footer
+    include sections/footer
+    script(src=`/js/${page}.js`)
     block scripts-footer

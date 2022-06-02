@@ -1,0 +1,25 @@
+#participa {
+  padding: 92px 24px;
+
+  @include modular-mq(sm) {
+    padding: 48px 24px;
+  }
+}
+
+.participa {
+  display: grid;
+  grid-template-areas: ". .";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  @include modular-mq(sm) {
+    grid-template-areas: "." ".";
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    @include modular-mq(sm) {
+      font-size: 42px;
+    }
+  }
+}

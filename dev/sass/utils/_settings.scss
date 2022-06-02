@@ -12,17 +12,8 @@ $global-mq-breakpoints: (
 
 // Global Settings
 
-$global-radius: 5px;
+$global-radius: 6px;
 $global-transition: 0.3s !default;
-
-// Global colors
-$global-colors: (
-  "branding-primary": hsl(72, 54%, 52%),
-  "notify-success": hsl(122, 39%, 49%),
-  "notify-info": hsl(199, 92%, 56%),
-  "notify-warning": hsl(36, 100%, 50%),
-  "notify-danger": hsl(4, 90%, 58%),
-);
 
 /**
  * Baseline grid lines height.
@@ -59,16 +50,35 @@ $global-spacing-unit-huge:  $global-baseline * $unit-factor-huge !default;
 $global-font-size: 16px !default;
 $global-line-height: $global-spacing-unit !default;
 $global-font-sizes: (
-  h1: 32px,
-  h2: 28px,
-  h3: 24px,
-  h4: 20px,
-  h5: 18px,
-  h6: 16px
+  bigest: 88px,
+  xxxxl: 70px,
+  xxxl: 52px,
+  xxl: 42px,
+  xl: 28px,
+  l: 24px,
+  m: 20px,
+  s: 18px,
+  xs: 16px,
+  xxs: 12px,
 ) !default;
 
+// Global colors
+$global-colors: (
+  "black": #000000,
+  "brand": #f4f5f3,
+  "primary":#d8dfd0,
+  "secondary":#d6d1c5,
+  "white": #FFFFFF,
+  "transparent": transparent,
+);
 
-$bg-body: 						    #16A085; // White
+$brand:       #f4f5f3;
+$primary:     #d8dfd0;
+$secondary:   #d6d1c5;
+$black:       #000000;
+$white:       #FFFFFF;
+
+$bg-body: 						    $primary; // White
 $color-third-text: 				#9e9e9e; // Branding blue
 $bg-button: 			        #836aad; // Language mobile menu
 $colot-text:							#FFF; //Text color
@@ -79,14 +89,19 @@ $wht:                     #f5f5f5;
 
 // Typography
 // -------------------------
-$font-family-second: 			Arial, Helvetica, sans-serif;
-$font-family-regular: 		'atlasgr-400', sans-serif;
-$font-family-medium: 			'atlasgr-700', sans-serif;
-$font-family-bold: 				'atlasgr-900', sans-serif;
+$global-font-family: (
+  brand: 'Open Sans',
+  primary: "Yanone Kaffeesatz",
+  secondary: 'Open Sans'
+) !default;
+
+$font-family-secondary: 	'Open Sans', Arial, Helvetica, sans-serif;
+$font-family-primary: 		"Yanone Kaffeesatz", sans-serif;
+$font-family-brand: 			'Open Sans', sans-serif;
 
 $font-size-button: 				22px;
 $font-size-copy-footer:	  12px;
 
 // Others
 // -------------------------
-$content-width: 				1280px;
+$content-width: 				1024px;

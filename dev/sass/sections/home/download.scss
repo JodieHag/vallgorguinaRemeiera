@@ -1,0 +1,24 @@
+#download {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download {
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: $brand;
+  border-radius: $global-radius;
+  min-height: 300px;
+  width: 80%;
+  padding: 48px;
+
+  .action {
+    margin: 24px auto;
+    text-align: center;
+    background-color: $primary;
+    padding: 24px;
+    border-radius: $global-radius;
+  }
+}

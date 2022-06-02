@@ -2,10 +2,10 @@
 /* ======================================================================
 	Home
 ======================================================================== */
-// Components :
-@import "../components/_language-menu";
 
 
-.owl-carousel {
-  margin-top: 60px;
-}
+@import "../sections/home/hero";
+@import "../sections/home/about";
+@import "../sections/home/taller";
+@import "../sections/home/participa";
+@import "../sections/home/download";

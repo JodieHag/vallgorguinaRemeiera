@@ -6,9 +6,13 @@
  * Usual text utility classes to overcome the common text management needs.
  */
 
-
-
-
+/* Font Family.
+   ========================================================================== */
+@each $name, $value in $global-font-family {
+  .mm-text-family-#{$name} {
+    font-family: $value;
+  }
+}
 
 /* Alignment.
    ========================================================================== */
@@ -36,8 +40,8 @@ $alignments: (
 
 
 @each $name, $value in $global-font-sizes {
-  .mm-text-#{$name} {
-    @include font-size($value, $line-height: none, $important: true);
+  .mm-text-size-#{$name} {
+    @include font-size($value, $line-height: none, $important: false);
   }
 }
 
@@ -56,7 +60,7 @@ $text-weights: (
   "normal": 400,
   "medium": 500,
   "semibold": 600,
-  "bold": 700,
+  "bold": bold,
   "extrabold": 800,
   "black": 900
 );

@@ -1,0 +1,35 @@
+#taller {
+  padding: 92px 24px;
+  background-color: #f4f5f3;
+
+  @include modular-mq(sm) {
+    padding: 48px 24px;
+  }
+}
+
+.taller {
+  display: grid;
+  grid-template-areas: ". .";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  @include modular-mq(sm) {
+    grid-template-areas: "." ".";
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    filter: brightness(0.8);
+    @include modular-mq(sm) {
+      font-size: 42px;
+    }
+  }
+
+  .image {
+    background-image:  url('../media/img/ortiga-dib.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+  }
+
+}

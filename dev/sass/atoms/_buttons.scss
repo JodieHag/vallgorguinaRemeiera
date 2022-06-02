@@ -1,0 +1,80 @@
+.mm-button {
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 12px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.mm-button-s {
+  padding: 8px 16px;
+}
+
+.mm-button-m {
+  padding: 16px 24px;
+}
+
+.mm-button-brand {
+  border-color: $brand;
+  background-color: $brand;
+  color: $black !important;
+  @extend .mm-button;
+
+  &:hover:not(.mm-button-not-hover) {
+    border-color: $secondary;
+    background-color: $black;
+    color: $secondary !important;;
+  }
+}
+
+.mm-button-primary {
+  border-color: $secondary;
+  background-color: $black;
+  color: $secondary !important;
+  @extend .mm-button;
+
+  &:hover:not(.mm-button-not-hover) {
+    background-color: $secondary;
+    color: $black !important;;
+  }
+}
+
+.mm-button-primary--clean {
+  border-color: $black;
+  background-color: $black;
+  color: $secondary !important;
+  @extend .mm-button;
+
+  &:hover:not(.mm-button-not-hover) {
+    background-color: $secondary;
+    color: $black !important;;
+  }
+}
+
+.mm-button-secondary {
+  border-color: $secondary;
+  background-color: $secondary;
+  color: $primary !important;
+  @extend .mm-button;
+
+  &:hover:not(.mm-button-not-hover) {
+    background-color: $primary;
+    color: $secondary !important;
+  }
+}
+
+
+.mm-button-secondary--clean {
+  border-color: $black;
+  background-color: $secondary;
+  color: $primary !important;
+  @extend .mm-button;
+
+  &:hover:not(.mm-button-not-hover) {
+    background-color: $primary;
+    color: $secondary !important;
+  }
+}

@@ -1,0 +1,16 @@
+.cookies {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  .container {
+      text-align: center;
+      background-color: white;
+      margin: auto;
+      width: 100%;
+      padding: 10px;
+      opacity: 0.8;
+  }
+}

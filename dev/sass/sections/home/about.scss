@@ -1,0 +1,21 @@
+#about {
+
+}
+
+.about {
+  padding: 92px 24px;
+  column-count: 2;
+
+  @include modular-mq(sm) {
+    padding: 48px 24px;
+    column-count: 1;
+  }
+
+  .title {
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin: 12px 0;
+  }
+}

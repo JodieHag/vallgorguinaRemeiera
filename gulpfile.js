@@ -181,8 +181,8 @@ gulp.task('pug', async () => {
     .pipe(
       pug({
         locals: {
-          i18n: require('./dev/i18n/en-GB/translation.json'),
-          lang: 'en',
+          i18n: require('./dev/i18n/es-CA/translation.json'),
+          lang: 'ca',
           page: 'index',
         },
       })

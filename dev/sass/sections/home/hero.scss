@@ -1,0 +1,50 @@
+#hero {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('../media/img/ortiga-dib.jpg');
+  background-position: 50% 50%;
+  object-fit: cover;
+  display: block;
+  vertical-align: middle;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.hero {
+  .box {
+    margin: 124px 0;
+    box-shadow: 0 0 40px 4px rgb(26 26 26 / 80%);
+    border: 4px solid white;
+    border-radius: $global-radius;
+    padding: 64px;
+    width: 80%;
+    height: 100%;
+    background-color: #9e9e9e4f;
+    @include modular-mq(sm) {
+      padding: 48px;
+      margin: 72px 0;
+      width: 90%;
+    }
+  }
+
+  .title {
+    line-height: 1;
+    z-index: 2;
+    @include modular-mq(sm) {
+      font-size: 42px !important;
+      text-align: center;
+    }
+  }
+
+  .date {
+    @include modular-mq(sm) {
+      font-size: 14px !important;
+    }
+  }
+
+  .subtitle {
+    @include modular-mq(sm) {
+      font-size: 20px !important;
+    }
+  }
+
+}
