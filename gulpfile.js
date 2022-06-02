@@ -86,7 +86,7 @@ gulp.task('sass', async () => {
 })
 
 // Concatenate & Minify JS
-gulp.task('scripts', () => {
+gulp.task('scripts', async () => {
   for (const page in projectSettings.pages) {
   return gulp
     .src(['node_modules/babel-polyfill/dist/polyfill.js', `dev/js/pages/${page}.js`])
