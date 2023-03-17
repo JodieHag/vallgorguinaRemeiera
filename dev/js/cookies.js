@@ -1,4 +1,3 @@
-
 const setCookie = (name, value, box) => {
   const d = new Date()
   d.setTime(d.getTime() + 10 * 24 * 60 * 60 * 10000)
