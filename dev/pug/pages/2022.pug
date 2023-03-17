@@ -2,6 +2,10 @@ extends ../layout.pug
 block title
   title
     | Vallgorguina Remeiera 2022
+block script-head
+  meta(property='og:title', content="Vallgorguina Remeiera 2022")
+  meta(property='og:description', content="Jornades Vallgorguina Remeiera 2022")
+  meta(name='description', content="Jornades Vallgorguina Remeiera 2022")
 block content
   include ../sections/2022/hero
   include ../sections/2022/about
