@@ -1,0 +1,47 @@
+@import "../atoms/overlay";
+@import "../atoms/logo";
+@import "../molecules/menu-list-items";
+@import "../molecules/menu-lang";
+@import "../molecules/menu-burguer";
+
+.menu {
+  display: none;
+  @include modular-mq(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.main-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 3000ms ease-out;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-menu.open {
+  display: flex;
+  transition: opacity 3000ms ease-out;
+  opacity: 1;
+}
+
+.menu-get-touch {
+  margin-top: 24px;
+  @include modular-mq(sm) {
+    margin-top: 12px;
+  }
+}
+
+.menu-desk {
+  display: flex;
+  align-items: center;
+  @include modular-mq(md) {
+    display: none;
+  }
+}

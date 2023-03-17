@@ -1,0 +1,16 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-color: $black;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 10;
+
+  @include modular-mq(sm) {
+    background-size: contain;
+  }
+}

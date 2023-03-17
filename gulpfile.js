@@ -31,7 +31,7 @@ process.setMaxListeners(0)
 gulp.task('connect', async () => {
   await connect.server({
     root: 'www',
-    port: 8080,
+    port: 8000,
     livereload: true,
   })
 })
@@ -88,23 +88,23 @@ gulp.task('sass', async () => {
 // Concatenate & Minify JS
 gulp.task('scripts', async () => {
   for (const page in projectSettings.pages) {
-  return gulp
-    .src(['node_modules/babel-polyfill/dist/polyfill.js', `dev/js/pages/${page}.js`])
-    .pipe(prettier())
-    .pipe(
-      webpack({
-        mode: 'production',
-        module: {
-          rules: [{ test: /\.js$/, use: 'babel-loader' }],
-        },
+    await gulp
+      .src(['node_modules/babel-polyfill/dist/polyfill.js', `dev/js/pages/${page}.js`])
+      .pipe(prettier())
+      .pipe(
+        webpack({
+          mode: 'production',
+          module: {
+            rules: [{ test: /\.js$/, use: 'babel-loader' }],
+          },
+        })
+      )
+      .pipe(concat(`${page}.js`))
+      .pipe(gulp.dest('www/js'))
+      .pipe(livereload())
+      .on('end', () => {
+        log('scripts Done!')
       })
-    )
-    .pipe(concat(`${page}.js`))
-    .pipe(gulp.dest('www/js'))
-    .pipe(livereload())
-    .on('end', () => {
-      log('scripts Done!')
-    })
   }
 })
 
@@ -234,9 +234,11 @@ gulp.task('watch', async () => {
   await gulp.watch('dev/js/*.js', gulp.series(['scripts']))
   await gulp.watch('dev/js/components/*.js', gulp.series(['scripts']))
   await gulp.watch('dev/js/molecules/*.js', gulp.series(['scripts']))
+  await gulp.watch('dev/js/pages/*.js', gulp.series(['scripts']))
   await gulp.watch('dev/sass/*/*.*', gulp.series(['sass']))
   await gulp.watch('dev/sass/**/*.*', gulp.series(['sass']))
   await gulp.watch('dev/sass/**/**/*.*', gulp.series(['sass']))
+  await gulp.watch('dev/sass/sections/**/*.sass', gulp.series(['sass']))
   await gulp.watch(['dev/i18n/**/*.json'], gulp.series(['pug']))
   await gulp.watch(['dev/pug/*.pug', 'dev/pug/**/*.pug'], gulp.series(['pug']))
   await gulp.watch('dev/pug/**/*.pug', gulp.series(['pug']))

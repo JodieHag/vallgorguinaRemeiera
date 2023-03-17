@@ -1,0 +1,26 @@
+.menu-lang, .menu-lang-desk {
+  z-index: 1;
+  margin-right: 48px;
+  @include modular-mq(sm) {
+    margin-right: 12px;
+  }
+
+  .lang-separator {
+    margin: 0 8px;
+  }
+}
+
+.menu-lang {
+  display: none;
+  @include modular-mq(md) {
+    display: block;
+    margin-right: 12px;
+  }
+}
+
+.menu-lang-desk {
+  display: flex;
+  @include modular-mq(md) {
+    display: none;
+  }
+}

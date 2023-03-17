@@ -4,6 +4,7 @@ const config = {
   },
   'pages': {
     'index': 'index',
+    '2022': '2022'
   }
 }
 

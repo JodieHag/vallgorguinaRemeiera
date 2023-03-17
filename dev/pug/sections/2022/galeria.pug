@@ -1,0 +1,12 @@
+section#galeria.mm-background-primary
+  .galeria
+    ul.box
+      each val, key in i18n.year2022.gallery
+        li.galeria-box-item
+          img(src=`../media/img/2022/event/${val}`, id=`vallgorguina-remeiera-${val}`, alt=`vallgorguina-remeiera-${val}`).galeria-item
+    .lightbox.mm-hidden
+      .overlay
+      .lightbox-item
+        .lightbox-close.mm-text-primary.mm-text-size-xxxl.mm-text-right x
+        img(src='', id=`lightbox`, alt=`lightbox`)
+        

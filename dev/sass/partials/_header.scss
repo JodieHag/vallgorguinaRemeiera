@@ -1,8 +1,12 @@
 @import "../atoms/logo";
+@import "../organism/menu";
 .menu-header {
+  display: flex;
   position: fixed;
   top: 0;
-  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
   padding: 24px 56px;
   width: 100%;
 

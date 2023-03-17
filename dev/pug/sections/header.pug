@@ -4,3 +4,28 @@ header.menu-header.mm-background-transparent
       picture
         source(src='../media/img/logo.png', alt='logo', title='logo')
         img(src='../media/img/logo.png', alt='logo', title='logo')
+  nav.menu.mm-button-primary.mm-button-not-hover
+    .menu-burguer
+      span.mm-background-black.bar
+      span.mm-background-black.bar
+      span.mm-background-black.bar
+      span.mm-background-black.bar
+      span.mm-background-black.bar
+      span.mm-background-black.bar
+    .main-menu
+      .overlay
+      ul.list-items-menu.mm-text-family-primary.mm-text-bold.mm-text-left
+        each val, key in i18n.general.header.items
+          li.mm-text-white(class=`${page === val.id ? 'list-items-menu-active' : ''}`)
+            a(href=`${val.external ? val.href : `/${lang}/${val.href}`}`, target=`${val.external ? '_blank' : ``}`)
+              span
+                | _#{val.title}
+  nav.menu-desk
+    ul.list-items-menu-desk.mm-text-family-primary.mm-text-medium
+      each val, key in i18n.general.header.items
+        li.mm-text-size-l(class=`${page === val.id ? 'list-items-menu-active' : ''}`)
+          a(href=`${val.external ? val.href : `/${lang}/${val.href}`}`, target=`${val.external ? '_blank' : ``}`)
+            span
+              | #{val.title}
+  
+    
