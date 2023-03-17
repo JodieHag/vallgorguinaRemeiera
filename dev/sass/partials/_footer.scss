@@ -16,6 +16,25 @@
 
     .item {
       width: 220px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include modular-mq(md) {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  }
+
+  .footer-colaborations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+
+    @include modular-mq(md) {
+      flex-direction: column;
     }
   }
 }
